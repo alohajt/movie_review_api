@@ -6,6 +6,11 @@ class MoviesController < ApplicationController
     render json: @movies 
   end
 
+  def show
+    @movie = Movie.find(params[:id])
+    # if :@movie
+    #   render status
+  end
   def create
     @movie = Movie.create(
       title: params[:title],
